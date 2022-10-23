@@ -1,6 +1,7 @@
 const notesListEl = document.querySelector('.notes')
 const createBtn = document.querySelector('.add-btn')
 const descriptionEl = document.querySelector('.descr')
+console.log(descriptionEl)
 
 createBtn.addEventListener('click', (e) => {
     const el = createNote('Title', 'Your note')
@@ -14,7 +15,7 @@ function createNote(title, text){
     noteEl.innerHTML = `
     <div class="note-header">
         <p class="note-name hidden">${title}</p>
-        <input class="note-name-input input" value='${title}'></input>
+        <input class="note-name-input input" placeholder='Title'></input>
         <div class="btns">
             <button class="hidden edit-btn note-btn"><i class="fa-sharp fa-solid fa-pen"></i></button>
             <button class="save-btn note-btn"><i class="fa-solid fa-floppy-disk"></i></button>
@@ -23,7 +24,7 @@ function createNote(title, text){
         </div>
     <div class="note-list">
         <p class="note-text hidden">${text}</p>
-        <textarea class="note-text-input input">${text}</textarea>
+        <textarea class="note-text-input input" placeholder='Your note'></textarea>
     </div>
     `
     const editBtn = noteEl.querySelector('.edit-btn')
