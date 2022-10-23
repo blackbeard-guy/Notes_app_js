@@ -1,8 +1,11 @@
 const notesListEl = document.querySelector('.notes')
 const createBtn = document.querySelector('.add-btn')
+const descriptionEl = document.querySelector('.descr')
+console.log(descriptionEl)
 
 createBtn.addEventListener('click', (e) => {
     const el = createNote('Title', 'Your note')
+    descriptionEl.classList.add('hidden')
     notesListEl.appendChild(el)
 })
 
